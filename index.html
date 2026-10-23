@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Nuestro Camino Juntos 🌸</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- MÚSICA DE FONDO -->
+    <audio id="musica-fondo" loop>
+        <source src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Claude_Debussy_-_Clair_de_lune_%28suite_bergamasque%29.ogg" type="audio/ogg">
+    </audio>
+
+    <!-- Contenedor del texto (Arriba) -->
+    <div id="text-container">
+        <h1 id="mensaje"></h1>
+        <p id="subtitulo"></p>
+    </div>
+
+    <!-- Contenedor de botones (Abajo) -->
+    <div id="btn-container">
+        <button id="btn-iniciar">Empezar nuestra historia</button>
+        <button id="btn-alinear" style="display: none;">Alinear Perspectiva</button>
+        <button id="btn-siguiente" style="display: none;">Dar el siguiente paso</button>
+        <button id="btn-final" style="display: none;">Nuestra historia</button>
+    </div>
+
+    <!-- Contenedor del Premio Final (Más simple y directo) -->
+    <div id="modal-premio" class="oculto">
+        <div class="tarjeta">
+            <h2>¡Sorpresa!</h2>
+            <p class="subtitle">Para seguir celebrando, tenemos este plan:</p>
+            <div class="caja-premio">
+                <h3 id="premio-titulo"></h3>
+                <p id="premio-desc"></p>
+            </div>
+            <button id="btn-cerrar-premio">¡Me encanta la idea!</button>
+        </div>
+    </div>
+
+    <!-- Contenedor para la intro 3D -->
+    <div id="intro-canvas"></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "gsap": "https://unpkg.com/gsap@3.12.5/index.js"
+            }
+        }
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
